@@ -32,6 +32,26 @@ body {
   color: #ffffff;
 }
 
+/* wrap, main, and footer together get the footer working properly */
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow: auto;
+  padding-bottom: 60px; /* must be same height as the footer */
+}
+
+.footer {
+  position: relative;
+  margin-top: -60px; /* negative value of footer height */
+  height: 60px;
+  clear: both;
+  background-color: #2d3e50;
+  color: #ffffff;
+}
+
 .splash-container {
   width: 100%;
   height: 400px;
@@ -63,11 +83,18 @@ body {
 }
 
 .splash-title {
-  font-size: 24pt;
+  font-size: 28pt;
+  margin: 20px;
 }
 
 .splash-subtitle {
   font-size: 12pt;
+}
+
+.vertically-centered-contents {
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
 }
 
 div {
